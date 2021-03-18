@@ -32,7 +32,7 @@ public class TweetController {
         if (filter == null) {
             filter = "all";
         }
-        if(filter.equalsIgnoreCase("following")) {
+        if (filter.equalsIgnoreCase("following")) {
             List<User> following = loggedInUser.getFollowing();
             tweets = tweetService.findAllByUsers(following);
             model.addAttribute("filter", "following");
